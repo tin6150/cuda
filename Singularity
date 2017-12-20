@@ -33,9 +33,12 @@ This container is a CentOS 6 with nvidia cuda runtime
 			#openmotif openmotif-devl openmotif22 \
 
 	yum -ty install dkms \
-			cuda-nvidia-kmod-common nvidia-kmod nvidia-modprobe nvidia-settings nvidia-uvm-kmod nvidia-xconfig pcp-pmda-nvidia-gpu \
-			xorg-x11-drv-nvidia xorg-x11-drv-nvidia-gl xorg-x11-drv-nvidia-diagnostic xorg-x11-drv-nvidia-devel \
-			org-x11-drv-nvidia-libs 
+			cuda-nvidia-kmod-common nvidia-kmod \
+			pcp-pmda-nvidia-gpu \
+			xorg-x11-drv-nvidia xorg-x11-drv-nvidia-gl xorg-x11-drv-nvidia-devel \
+		 	xorg-x11-drv-nvidia-libs 
+			# xorg-x11-drv-nvidia-diagnostic  
+			# nvidia-settings nvidia-uvm-kmod nvidia-xconfig nvidia-modprobe # obsolete
 			#xorg-x11-drv-nvidia-libs-387.26-1
 			# org-x11-drv-nvidia-libs should provide /usr/lib64/libcuda.so.1
 			# from cuda repo ::
