@@ -28,10 +28,18 @@ This container is a CentOS 6 with nvidia cuda runtime
 			environment-modules \
 			ipmitool \
 			pciutils \
+			cuda-nvidia-kmod-common nvidia-kmod nvidia-modprobe nvidia-settings nvidia-uvm-kmod nvidia-xconfig pcp-pmda-nvidia-gpu \
+			xorg-x11-drv-nvidia org-x11-drv-nvidia-libs xorg-x11-drv-nvidia-gl xorg-x11-drv-nvidia-diagnostic xorg-x11-drv-nvidia-devel \
 			epel-release  # sl6 may need diff mech to enable epel
 			#libpng libpng-devel libpng-static \
 			#openmotif openmotif-devl openmotif22 \
-
+			# org-x11-drv-nvidia-libs should provide /usr/lib64/libcuda.so.1
+			# from cuda repo ::
+			# name=cuda
+			# baseurl=http://developer.download.nvidia.com/compute/cuda/repos/rhel6/x86_64
+			# enabled=1
+			# gpgcheck=1
+			# gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA
 
 
 	echo "end"                  >> /THIS_IS_INSIDE_SINGULARITY
