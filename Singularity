@@ -1,6 +1,6 @@
 
 # Singularity container definition 
-# Cuda 7.5 run time on CentOS 6
+# Cuda 8.0 run time on CentOS 6
 # 
 
 # ref https://hub.docker.com/r/nvidia/cuda/
@@ -9,7 +9,7 @@
 
 
 BootStrap: docker
-From: nvidia/cuda:7.5-runtime-centos6
+From: nvidia/cuda:8.0-runtime-centos6
 #From: nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
 
 
