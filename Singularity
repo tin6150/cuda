@@ -25,12 +25,13 @@ This container is a CentOS 6 with nvidia cuda runtime
 	#echo "Hello from inside the container"
 	touch /THIS_IS_INSIDE_SINGULARITY
 	yum -ty install vim bash zsh wget curl tar coreutils which util-linux-ng man \
-			environment-modules \
+			environment-modules telnet nc \
 			ipmitool \
 			pciutils \
 			epel-release  # sl6 may need diff mech to enable epel
 			#libpng libpng-devel libpng-static \
 			#openmotif openmotif-devl openmotif22 \
+			# telnet client for troubleshooting license manager connection
 
 	yum -ty install dkms \
 			cuda-nvidia-kmod-common nvidia-kmod \
